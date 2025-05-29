@@ -10,8 +10,7 @@ async def login_to_bank_of_guam(username):
         async with async_playwright() as p:
             # Launch browser with better options for headless environment
             browser = await p.chromium.launch(
-                headless=False,
-                slow_mo=1000,
+                headless=True,
                 args=[
                     '--no-sandbox',
                     '--disable-setuid-sandbox',
